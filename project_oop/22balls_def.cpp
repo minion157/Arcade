@@ -27,6 +27,7 @@ int Balls :: playthegame()
     cout<<"\n maximum of 4 balls or a minimum of 1 at a time.If you take";
     cout<<"\n the last ball from the table you will WIN other wise Computer will win\n";
     SetConsoleTextAttribute(console,6);
+    lb:
     cout<<"\n Either You or Computer can Take First ,Enter your choice"<<"\nI(you)/C(computer)   ";
     SetConsoleTextAttribute(console,15);
     cin>>ch;
@@ -44,6 +45,8 @@ int Balls :: playthegame()
         }
         r=r-a;
     }
+    else if(ch!='c' && ch!='C')
+        goto lb;
     while(r>0)
     {
         c=r%5;
